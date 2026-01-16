@@ -105,7 +105,59 @@ input {
     // automatically.
     position x=1280 y=0
 }
+output "DP-4" {
+    // off
+    mode "1920x1080@60.000"
+    scale 1.0
+    transform "normal"
+    position x=1920 y=0
+    variable-refresh-rate // on-demand=true
+    // focus-at-startup
+    backdrop-color "#001100"
 
+    hot-corners {
+        // off
+        // top-left
+        // top-right
+        // bottom-left
+        // bottom-right
+    }
+
+    layout {
+        // ...layout settings for DP-4...
+    }
+
+    // Custom modes. Caution: may damage your display.
+    // mode custom=true "1920x1080@100"
+    // modeline 173.00  1920 2048 2248 2576  1080 1083 1088 1120 "-hsync" "+vsync"
+}
+
+output "HDMI-A-2" {
+    // off
+    mode "1920x1080@100.000"
+    scale 1.0
+    transform "normal"
+    position x=0 y=0
+    // variable-refresh-rate // on-demand=true
+    // focus-at-startup
+    backdrop-color "#001100"
+
+    hot-corners {
+        // off
+        // top-left
+        // top-right
+        // bottom-left
+        // bottom-right
+    }
+
+    layout {
+        // ...layout settings for HDMI-A-2...
+    }
+
+    // Custom modes. Caution: may damage your display.
+    // mode custom=true "1920x1080@100"
+    // modeline 173.00  1920 2048 2248 2576  1080 1083 1088 1120 "-hsync" "+vsync"
+}
 // Settings that influence how windows are positioned and sized.
 // Find more information on the wiki:
 // https://yalter.github.io/niri/Configuration:-Layout
@@ -269,12 +321,12 @@ layout {
 
 // This line starts waybar, a commonly used bar for Wayland compositors.
 
-spawn-sh-at-startup "systemctl --user import-environment XDG_SESSION_TYPE XDG_CURRENT_DESKTOP"
-spawn-sh-at-startup "dbus-update-activation-environment --systemd WAYLAND_DISPLAY XDG_CURRENT_DESKTOP=niri"
+//spawn-sh-at-startup "systemctl --user import-environment XDG_SESSION_TYPE XDG_CURRENT_DESKTOP"
+//spawn-sh-at-startup "dbus-update-activation-environment --systemd WAYLAND_DISPLAY XDG_CURRENT_DESKTOP=niri"
 spawn-at-startup "waybar"
 spawn-at-startup "nextcloud"
 spawn-at-startup "nm-applet"
-spawn-sh-at-startup "swaybg -i /home/blau/dotfiles/Wallpaper.png"
+spawn-sh-at-startup "swaybg -i /home/blau/dotfiles/mojave.webp"
 // To run a shell command (with variables, pipes, etc.), use spawn-sh-at-startup:
 // spawn-sh-at-startup "qs -c ~/source/qs/MyAwesomeShell"
 
@@ -370,8 +422,8 @@ binds {
     Mod+Return hotkey-overlay-title="Open a Terminal: alacritty" { spawn "kitty"; }
     Mod+D hotkey-overlay-title="Run an Application: wofi" { spawn "fuzzel"; }
     Super+Alt+L hotkey-overlay-title="Lock the Screen: swaylock" { spawn "swaylock"; }
-    Super+Shift+W { spawn "firefox";}
-    Super+Shift+F { spawn "pcmanfm";}
+    Super+Shift+W { spawn "zen";}
+    Mod+Shift+period { spawn "pcmanfm";}
     // Use spawn-sh to run a shell command. Do this if you need pipes, multiple commands, etc.
     // Note: the entire command goes as a single argument. It's passed verbatim to `sh -c`.
     // For example, this is a standard bind to toggle the screen reader (orca).

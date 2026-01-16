@@ -78,7 +78,7 @@ output * bg ./10-13.jpg fill
     # Start your launcher
     bindsym $mod+d exec wofi --show drun
 
-    bindsym $mod+Shift+w exec firefox
+    bindsym $mod+Shift+w exec zen
 
     bindsym $mod+Shift+f exec $filemanager
     # Drag floating windows by holding down $mod and left mouse button.

@@ -326,6 +326,7 @@ layout {
 spawn-at-startup "waybar"
 spawn-at-startup "nextcloud"
 spawn-at-startup "nm-applet"
+spawn-at-startup "redshift"
 spawn-sh-at-startup "swaybg -i /home/blau/dotfiles/mojave.webp"
 // To run a shell command (with variables, pipes, etc.), use spawn-sh-at-startup:
 // spawn-sh-at-startup "qs -c ~/source/qs/MyAwesomeShell"
